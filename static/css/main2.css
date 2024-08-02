@@ -1,0 +1,39 @@
+table {
+    width: 40%; 
+    margin: auto; 
+    border-collapse: collapse; 
+}
+th, td {
+    border: 1px solid black; 
+    padding: 8px; 
+    text-align: left; 
+}
+th {
+    background-color: #f2f2f2; 
+}
+
+th, td {
+    width: 25%; 
+}
+
+.btn {
+    padding: 10px;
+    background-color: #4CAF50; 
+    color: white; 
+    border: none;
+    cursor: pointer;
+}
+.btn:hover {
+    background-color: #14ec0d; 
+}
+
+form {
+    width: 20%; 
+    margin: 20px auto; 
+}
+input[type="text"] {
+    width: calc(100% - 100px); 
+    padding: 10px;
+    margin-right: 10px; 
+}
+
