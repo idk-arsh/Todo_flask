@@ -1,1 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" class="theme-light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main2.css') }}">
+
+    <title>Task Directory</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Task Info.</h1>
+    <table>
+        <tr>
+        <th>Content</th>
+        <th>Date</th>
+        <th>Actions</th>
+        </tr>
+        {% for task in tasks %}
+        <tr>
+            <td>{{task.content}}</td>
+            <td>{{task.date_created.date()}}</td>
+            <td>
+                <a href="delete/{{task.id}}">Delete</a><br>
+                <a href="update/{{task.id}}">Update</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <div class="form">
+        <form action="/task/" method="POST">
+            <input type="text" name="content" id="'content" placeholder="Decribe task" />
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </div>
+ 
+
+</body>
+</html>
 
